@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Alcova Motel · 42 suítes com garagem privativa, aberto 24h</title>
+  <meta name="description" content="Alcova Motel. 42 suítes com garagem privativa, entrada pela rua de trás e reserva online por data, horário e quantidade de suítes.">
+  <meta name="theme-color" content="#0d0a09">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230d0a09'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-style='italic' font-size='42' text-anchor='middle' fill='%23ff5a4e'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://images.pexels.com">
+  <link rel="preload" href="fonts/bodoni-moda-latin-standard-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/archivo-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#reservar">Pular para a reserva</a>
+
+  <!-- Tela de entrada -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__count"><span data-count>000</span></div>
+    <p class="loader__txt">acendendo o letreiro</p>
+    <div class="loader__line"><span></span></div>
+  </div>
+
+  <!-- Navegação -->
+  <header class="nav" data-nav>
+    <a class="nav__logo" href="#topo" aria-label="Alcova, voltar ao início"><em>Alcova</em><small>motel</small></a>
+    <nav class="nav__links" aria-label="Principal">
+      <a href="#suites">Suítes</a>
+      <a href="#valores">Valores</a>
+      <a href="#dentro">Por dentro</a>
+      <a href="#discricao">Discrição</a>
+    </nav>
+    <div class="nav__right">
+      <span class="nav__clock" aria-live="off"><span>agora</span> <b data-clock>--:--</b></span>
+      <a class="btn-lamp" href="#reservar"><i></i>Reservar</a>
+      <button class="nav__menu" type="button" aria-expanded="false" aria-controls="menu" data-menu-btn><span></span><span></span><b class="sr">Abrir menu</b></button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" data-menu hidden>
+    <ol>
+      <li><a href="#suites"><span>01</span>Suítes</a></li>
+      <li><a href="#valores"><span>02</span>Valores</a></li>
+      <li><a href="#dentro"><span>03</span>Por dentro</a></li>
+      <li><a href="#discricao"><span>04</span>Discrição</a></li>
+      <li><a href="#reservar"><span>05</span>Reservar</a></li>
+    </ol>
+    <p>Estrada das Acácias, 1200<br>entrada pela Rua dos Ipês</p>
+  </div>
+
+  <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__label" data-cursor-label></span></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <main>
+    <!-- 1. Fachada: o portão sobe e a câmera entra -->
+    <section class="hero" id="topo" aria-label="Entrada do motel">
+      <div class="hero__pin">
+        <div class="hero__room ph">
+          <img src="https://images.pexels.com/photos/5198473/pexels-photo-5198473.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1920"
+               srcset="https://images.pexels.com/photos/5198473/pexels-photo-5198473.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900 900w,
+                       https://images.pexels.com/photos/5198473/pexels-photo-5198473.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1920 1920w,
+                       https://images.pexels.com/photos/5198473/pexels-photo-5198473.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=2600 2600w"
+               sizes="100vw" alt="Interior escuro iluminado por luz vermelha e roxa" fetchpriority="high">
+        </div>
+        <div class="hero__shade"></div>
+
+        <div class="hero__facade" aria-hidden="true">
+          <div class="hero__wall"></div>
+          <div class="hero__glow"></div>
+          <div class="hero__sign">
+            <span class="neon" data-neon>Alcova</span>
+            <span class="hero__sign-sub"><i>M</i><i>O</i><i>T</i><i>E</i><i>L</i></span>
+          </div>
+          <div class="gate__frame"></div>
+          <div class="gate">
+            <div class="gate__light"></div>
+            <div class="gate__shutter">
+              <span class="gate__num">06</span>
+              <span class="gate__handle"></span>
+            </div>
+          </div>
+          <div class="lamp"><span class="lamp__bulb"></span><span class="lamp__label">livre</span></div>
+          <div class="hero__ground"><span class="hero__spill"></span></div>
+        </div>
+
+        <div class="hero__meta">
+          <p>Estrada das Acácias, 1200<br><span>entrada pela Rua dos Ipês</span></p>
+          <p class="hero__hint"><span>Role devagar.</span> O portão é pesado.<i></i></p>
+        </div>
+
+        <div class="hero__title">
+          <p class="eyebrow">Alcova Motel · aberto 24 horas</p>
+          <h1 class="display" data-hero-title><span class="line"><span>Ninguém viu</span></span><span class="line"><span><em>você chegar.</em></span></span></h1>
+          <p class="hero__lead">42 suítes, cada uma com a própria garagem. O portão fecha antes de você abrir a porta do carro.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Manifesto -->
+    <section class="manifesto" aria-label="Sobre a casa">
+      <figure class="float float--a ph" data-speed="-18">
+        <img src="https://images.pexels.com/photos/11976218/pexels-photo-11976218.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Taças de espumante contra fundo preto" loading="lazy">
+      </figure>
+      <figure class="float float--b ph" data-speed="22">
+        <img src="https://images.pexels.com/photos/4863069/pexels-photo-4863069.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Tecido de cetim vermelho" loading="lazy">
+      </figure>
+      <figure class="float float--c ph" data-speed="-30">
+        <img src="https://images.pexels.com/photos/31353872/pexels-photo-31353872.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Letreiro de neon de motel à noite" loading="lazy">
+      </figure>
+
+      <div class="manifesto__inner">
+        <p class="eyebrow">A casa</p>
+        <p class="manifesto__text" data-reveal-words>Aqui não tem saguão, não tem fila e ninguém chama você pelo nome. A gente só precisa saber a que horas você chega e quanto tempo pretende ficar.</p>
+        <ul class="facts">
+          <li><b>42</b><span>suítes, todas com garagem</span></li>
+          <li><b>6</b><span>jeitos diferentes de quarto</span></li>
+          <li><b>05h</b><span>a cozinha fecha, só</span></li>
+          <li><b>0</b><span>recepção, balcão ou saguão</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. Faixa -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__row" data-ticker="1"><span>Garagem privativa</span><span>Cozinha até as 5h</span><span>Enxoval trocado a cada entrada</span><span>Pagamento pela janelinha</span><span>Fatura com nome neutro</span></div>
+      <div class="ticker__row ticker__row--alt" data-ticker="-1"><span>Pix</span><span>Cartão</span><span>Dinheiro</span><span>Pernoite a partir das 20h</span><span>Saída até as 12h</span><span>Aberto 24 horas</span></div>
+    </div>
+
+    <!-- 4. A rua de dentro: câmera em 3D passando pelas garagens -->
+    <section class="lane" id="suites" aria-labelledby="lane-title">
+      <div class="lane__stage">
+        <header class="lane__head">
+          <p class="eyebrow">Suítes · 6 tipos</p>
+          <h2 id="lane-title" class="display">A rua <em>de dentro</em></h2>
+          <p class="lane__sub">Role para descer a rua. Luz verde em cima do portão quer dizer livre.</p>
+        </header>
+
+        <div class="lane__viewport" data-cursor="role">
+          <div class="lane__env" data-env aria-hidden="true">
+            <div class="lane__floor"></div>
+            <div class="lane__wall lane__wall--l"></div>
+            <div class="lane__wall lane__wall--r"></div>
+          </div>
+          <!-- garagens geradas a partir de js/data.js -->
+          <div class="lane__world" data-world></div>
+        </div>
+        <div class="lane__fog"></div>
+
+        <aside class="hud" data-hud aria-live="polite">
+          <p class="hud__num"><span data-hud-num>01</span><small>/06</small></p>
+          <h3 class="hud__name display" data-hud-name>Cortina</h3>
+          <p class="hud__text" data-hud-text></p>
+          <ul class="hud__feat" data-hud-feat></ul>
+          <div class="hud__row">
+            <p class="hud__price">2 horas a partir de <b data-hud-price>R$ 89</b></p>
+            <p class="hud__qty" data-hud-qty>14 suítes deste tipo</p>
+          </div>
+          <a class="link-arrow" href="#reservar" data-hud-book>Reservar esta suíte</a>
+        </aside>
+
+        <div class="lane__progress" aria-hidden="true"><span data-lane-bar></span></div>
+      </div>
+    </section>
+
+    <!-- 5. Valores: painel de letras que viram -->
+    <section class="prices" id="valores" aria-labelledby="prices-title">
+      <div class="tilt">
+        <div class="prices__head">
+          <p class="eyebrow">Permanência</p>
+          <h2 id="prices-title" class="display">Quanto tempo<br><em>vocês têm?</em></h2>
+          <p>Valores por suíte, para até duas pessoas. Pessoa adicional: R$ 40. A hora extra começa a contar depois de 15 minutos de tolerância.</p>
+        </div>
+        <div class="prices__board">
+          <div class="tabs" role="tablist" aria-label="Escolha a suíte" data-board-tabs></div>
+          <div class="board" data-board></div>
+          <p class="prices__note">Pernoite: entrada a partir das 20h, saída até as 12h do dia seguinte.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Por dentro: rolagem horizontal -->
+    <section class="inside" id="dentro" aria-labelledby="inside-title">
+      <div class="inside__pin" data-cursor="role">
+        <div class="inside__track" data-inside-track>
+          <div class="inside__intro">
+            <p class="eyebrow">Por dentro</p>
+            <h2 id="inside-title" class="display">O que já está<br><em>lá esperando.</em></h2>
+            <p>Vale para todas as suítes, da Cortina à Alcova.</p>
+          </div>
+
+          <figure class="card">
+            <div class="card__img ph"><img src="https://images.pexels.com/photos/28984405/pexels-photo-28984405.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="Carro estacionado em garagem com pouca luz" loading="lazy"></div>
+            <figcaption><span class="card__code">A/01</span><b>Garagem fechada</b>Cada suíte tem a sua. O portão desce no controle, por dentro, e só sobe quando vocês quiserem.</figcaption>
+          </figure>
+          <figure class="card card--tall">
+            <div class="card__img ph"><img src="https://images.pexels.com/photos/19763210/pexels-photo-19763210.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="Jantar com vinho e velas acesas" loading="lazy"></div>
+            <figcaption><span class="card__code">A/02</span><b>Cozinha até as 5h</b>Hambúrguer, porção, fondue e café da manhã. Chega pela janelinha, com campainha antes.</figcaption>
+          </figure>
+          <figure class="card">
+            <div class="card__img ph"><img src="https://images.pexels.com/photos/95949/pexels-photo-95949.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="Duas taças de vinho ao lado da garrafa e de velas" loading="lazy"></div>
+            <figcaption><span class="card__code">A/03</span><b>Adega gelada</b>Espumante nacional e importado sempre no ponto. Taça de cristal, nunca de plástico.</figcaption>
+          </figure>
+          <figure class="card card--tall">
+            <div class="card__img ph"><img src="https://images.pexels.com/photos/6276014/pexels-photo-6276014.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="Seda vermelha em close" loading="lazy"></div>
+            <figcaption><span class="card__code">A/04</span><b>Enxoval lacrado</b>Lençol de algodão 400 fios, trocado e embalado a cada entrada. Você rasga o lacre.</figcaption>
+          </figure>
+          <figure class="card">
+            <div class="card__img ph"><img src="https://images.pexels.com/photos/6032425/pexels-photo-6032425.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="Banheiro com banheira e luz baixa" loading="lazy"></div>
+            <figcaption><span class="card__code">A/05</span><b>Banho quente</b>Chuveiro a gás com pressão de casa, toalha felpuda e secador. Sabonete e xampu chegam lacrados.</figcaption>
+          </figure>
+
+          <div class="inside__end">
+            <p class="display">O resto<br><em>é com vocês.</em></p>
+          </div>
+        </div>
+        <div class="inside__bar" aria-hidden="true"><span data-inside-bar></span></div>
+      </div>
+    </section>
+
+    <!-- 7. Discrição: imagem fixa que troca a cada passo -->
+    <section class="story" id="discricao" aria-labelledby="story-title">
+      <header class="story__head">
+        <p class="eyebrow">Discrição</p>
+        <h2 id="story-title" class="display">Do portão pra dentro,<br><em>só vocês.</em></h2>
+      </header>
+      <div class="story__grid">
+        <div class="story__visual" aria-hidden="true">
+          <div class="story__frame">
+            <div class="story__img ph is-on"><img src="https://images.pexels.com/photos/15439324/pexels-photo-15439324.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="" loading="lazy"></div>
+            <div class="story__img ph"><img src="https://images.pexels.com/photos/18117654/pexels-photo-18117654.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="" loading="lazy"></div>
+            <div class="story__img ph"><img src="https://images.pexels.com/photos/9661389/pexels-photo-9661389.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="" loading="lazy"></div>
+            <div class="story__img ph"><img src="https://images.pexels.com/photos/6581054/pexels-photo-6581054.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="" loading="lazy"></div>
+            <div class="story__img ph"><img src="https://images.pexels.com/photos/9408443/pexels-photo-9408443.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="" loading="lazy"></div>
+            <p class="story__count"><b data-story-num>01</b>/05</p>
+          </div>
+        </div>
+        <ol class="story__steps">
+          <li class="step">
+            <span class="step__n">01</span>
+            <h3>Entre pela rua de trás.</h3>
+            <p>A entrada fica na Rua dos Ipês, sem placa grande na frente. Da avenida ninguém vê quem vira.</p>
+          </li>
+          <li class="step">
+            <span class="step__n">02</span>
+            <h3>Escolha pela luz.</h3>
+            <p>Luz verde em cima do portão é suíte livre. Se você reservou, o seu número já vai estar aceso esperando.</p>
+          </li>
+          <li class="step">
+            <span class="step__n">03</span>
+            <h3>O portão fecha primeiro.</h3>
+            <p>Só depois você desce do carro. Nenhuma outra garagem dá para a sua, e a escada sobe direto para o quarto.</p>
+          </li>
+          <li class="step">
+            <span class="step__n">04</span>
+            <h3>Tudo pela janelinha.</h3>
+            <p>Pedido, troco e maquininha passam por uma portinhola dupla. Quem está do outro lado não enxerga o quarto.</p>
+          </li>
+          <li class="step">
+            <span class="step__n">05</span>
+            <h3>Na fatura, outro nome.</h3>
+            <p>No extrato do cartão aparece ACV SERVICOS LTDA. A palavra motel não sai em lugar nenhum.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 8. Reserva -->
+    <section class="book" id="reservar" aria-labelledby="book-title">
+      <div class="tilt">
+        <header class="book__head">
+          <p class="eyebrow">Reserva</p>
+          <h2 id="book-title" class="display">Separe <em>a chave.</em></h2>
+          <p>Sem pagamento agora. Você paga na janelinha, no cartão ou Pix. A suíte fica segurada por 20 minutos depois do horário marcado.</p>
+        </header>
+
+        <div class="book__grid">
+          <form class="form" id="form-reserva" novalidate data-form>
+            <fieldset class="field">
+              <legend><span>1</span>Qual suíte</legend>
+              <div class="suite-pick" data-suite-pick></div>
+            </fieldset>
+
+            <fieldset class="field">
+              <legend><span>2</span>Que dia</legend>
+              <div class="cal" data-cal>
+                <div class="cal__head">
+                  <button type="button" class="cal__nav" data-cal-prev aria-label="Mês anterior">&larr;</button>
+                  <p class="cal__month" data-cal-month aria-live="polite"></p>
+                  <button type="button" class="cal__nav" data-cal-next aria-label="Próximo mês">&rarr;</button>
+                </div>
+                <div class="cal__week" aria-hidden="true"><span>D</span><span>S</span><span>T</span><span>Q</span><span>Q</span><span>S</span><span>S</span></div>
+                <div class="cal__days" data-cal-days role="grid"></div>
+              </div>
+              <p class="field__err" data-err="date"></p>
+            </fieldset>
+
+            <fieldset class="field">
+              <legend><span>3</span>Quanto tempo e a que horas</legend>
+              <div class="seg" role="radiogroup" aria-label="Permanência" data-period>
+                <label><input type="radio" name="period" value="2h" checked><span>2 horas</span></label>
+                <label><input type="radio" name="period" value="4h"><span>4 horas</span></label>
+                <label><input type="radio" name="period" value="pernoite"><span>Pernoite</span></label>
+              </div>
+              <div class="row-2">
+                <label class="input">
+                  <span>Chegada por volta de</span>
+                  <select name="time" data-time></select>
+                </label>
+                <p class="out" data-out>Saída até <b>--:--</b></p>
+              </div>
+              <p class="field__err" data-err="time"></p>
+            </fieldset>
+
+            <fieldset class="field">
+              <legend><span>4</span>Quantas suítes</legend>
+              <div class="qty">
+                <button type="button" class="qty__btn" data-qty-minus aria-label="Uma suíte a menos">&minus;</button>
+                <output class="qty__val" data-qty aria-live="polite">1</output>
+                <button type="button" class="qty__btn" data-qty-plus aria-label="Uma suíte a mais">+</button>
+                <p class="qty__info" data-avail></p>
+              </div>
+              <p class="field__hint">Vai em mais de um casal? Reserve duas ou mais garagens lado a lado.</p>
+            </fieldset>
+
+            <fieldset class="field">
+              <legend><span>5</span>Extras <small>opcional, valor por suíte</small></legend>
+              <div class="extras" data-extras></div>
+            </fieldset>
+
+            <fieldset class="field">
+              <legend><span>6</span>Contato</legend>
+              <div class="row-2">
+                <label class="input">
+                  <span>Como chamamos você? Pode ser apelido.</span>
+                  <input type="text" name="name" autocomplete="nickname" maxlength="40" required>
+                </label>
+                <label class="input">
+                  <span>WhatsApp</span>
+                  <input type="tel" name="phone" inputmode="numeric" autocomplete="tel-national" placeholder="(11) 9 0000-0000" required>
+                </label>
+              </div>
+              <p class="field__err" data-err="contact"></p>
+            </fieldset>
+          </form>
+
+          <aside class="ticket" data-ticket aria-label="Resumo da reserva">
+            <div class="fob-wrap">
+              <svg class="fob" data-fob viewBox="0 0 200 420" role="img" aria-label="Chaveiro da suíte">
+                <defs>
+                  <linearGradient id="fobFill" x1="0" x2="1" y1="0" y2="1">
+                    <stop offset="0" stop-color="#c6372c"/>
+                    <stop offset=".55" stop-color="#8f1d17"/>
+                    <stop offset="1" stop-color="#5c100c"/>
+                  </linearGradient>
+                  <linearGradient id="fobShine" x1="0" x2="1">
+                    <stop offset="0" stop-color="#fff" stop-opacity=".0"/>
+                    <stop offset=".45" stop-color="#fff" stop-opacity=".22"/>
+                    <stop offset=".6" stop-color="#fff" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="metal" x1="0" x2="1">
+                    <stop offset="0" stop-color="#8b8178"/>
+                    <stop offset=".5" stop-color="#e8e0d6"/>
+                    <stop offset="1" stop-color="#6f665e"/>
+                  </linearGradient>
+                </defs>
+                <!-- argola -->
+                <circle cx="100" cy="62" r="30" fill="none" stroke="url(#metal)" stroke-width="5"/>
+                <path d="M100 60 L178 150 Q186 160 178 172 L112 404 Q100 420 88 404 L22 172 Q14 160 22 150 Z" fill="url(#fobFill)"/>
+                <path d="M100 60 L178 150 Q186 160 178 172 L112 404 Q100 420 88 404 L22 172 Q14 160 22 150 Z" fill="url(#fobShine)"/>
+                <path d="M100 74 L166 152 Q172 160 166 170 L108 384 Q100 396 92 384 L34 170 Q28 160 34 152 Z" fill="none" stroke="#f3d9c7" stroke-opacity=".55" stroke-width="2"/>
+                <circle cx="100" cy="92" r="9" fill="#0d0a09" stroke="#f3d9c7" stroke-opacity=".5" stroke-width="2"/>
+                <path d="M91.2 90.7 A30 30 0 0 0 108.8 90.7" fill="none" stroke="url(#metal)" stroke-width="5"/>
+                <text x="100" y="140" text-anchor="middle" class="fob__brand">ALCOVA</text>
+                <text x="100" y="222" text-anchor="middle" class="fob__num" data-fob-num>01</text>
+                <text x="100" y="250" text-anchor="middle" class="fob__name" data-fob-name>CORTINA</text>
+                <text x="100" y="282" text-anchor="middle" class="fob__fine">ACHOU?</text>
+                <text x="100" y="294" text-anchor="middle" class="fob__fine">DEVOLVA NA</text>
+                <text x="100" y="306" text-anchor="middle" class="fob__fine">PORTARIA</text>
+              </svg>
+            </div>
+
+            <div class="ticket__body" data-ticket-body>
+              <dl class="sum">
+                <div><dt>Suíte</dt><dd data-sum="suite">01 Cortina</dd></div>
+                <div><dt>Dia</dt><dd data-sum="date">escolha no calendário</dd></div>
+                <div><dt>Chegada</dt><dd data-sum="time">--:--</dd></div>
+                <div><dt>Saída até</dt><dd data-sum="out">--:--</dd></div>
+                <div><dt>Suítes</dt><dd data-sum="qty">1</dd></div>
+                <div><dt>Extras</dt><dd data-sum="extras">nenhum</dd></div>
+              </dl>
+              <p class="total"><span>Total estimado</span><b data-sum="total">R$ 89</b></p>
+              <button class="btn-big" type="submit" form="form-reserva" data-submit><span>Separar a chave</span></button>
+              <p class="ticket__fine">Ao enviar você confirma que tem 18 anos ou mais.</p>
+            </div>
+
+            <div class="done" data-done hidden>
+              <p class="eyebrow">Chave separada</p>
+              <p class="done__code" data-done-code>ALC-0000</p>
+              <p class="done__txt" data-done-txt></p>
+              <a class="btn-big btn-big--wa" data-done-wa href="#" target="_blank" rel="noopener"><span>Confirmar pelo WhatsApp</span></a>
+              <button class="link-arrow link-arrow--back" type="button" data-done-reset>Fazer outra reserva</button>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 9. Rodapé com letreiro -->
+  <footer class="foot" aria-label="Endereço e contato">
+    <div class="foot__sign"><span class="neon neon--big" data-neon-foot>Alcova</span></div>
+    <div class="foot__grid">
+      <div>
+        <p class="eyebrow">Onde</p>
+        <p>Estrada das Acácias, 1200<br>Entrada pela Rua dos Ipês<br>São Paulo, SP</p>
+        <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=Estrada+das+Ac%C3%A1cias+1200" target="_blank" rel="noopener">Abrir no mapa</a>
+      </div>
+      <div>
+        <p class="eyebrow">Quando</p>
+        <p>Aberto 24 horas, todos os dias,<br>inclusive feriados.<br>Cozinha até as 5h.</p>
+      </div>
+      <div>
+        <p class="eyebrow">Fale</p>
+        <p><a href="https://wa.me/5511900000000" target="_blank" rel="noopener">WhatsApp (11) 9 0000-0000</a><br><a href="tel:+551100000000">Portaria (11) 0000-0000</a><br><a href="https://instagram.com/" target="_blank" rel="noopener">@alcovamotel</a></p>
+      </div>
+      <div>
+        <p class="eyebrow">Aviso</p>
+        <p>Proibida a entrada de menores de 18 anos. Documento com foto pode ser pedido na janelinha.</p>
+      </div>
+    </div>
+    <div class="foot__base">
+      <p>© 2026 Alcova Motel · ACV Serviços Ltda.</p>
+      <a href="#topo" class="foot__top" data-top>Subir o portão &uarr;</a>
+    </div>
+  </footer>
+
+  <script src="vendor/gsap.min.js"></script>
+  <script src="vendor/ScrollTrigger.min.js"></script>
+  <script src="vendor/SplitText.min.js"></script>
+  <script src="vendor/lenis.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
