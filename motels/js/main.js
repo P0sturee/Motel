@@ -45,23 +45,11 @@
     ).join('');
   })();
 
-  // Fotos do Pexels: fotos antigas usam outro nome de arquivo, então tenta as
-  // variações antes de desistir. Se nada carregar, fica o fundo vinho do .ph.
-  const PEXELS_NAMES = ['pexels-photo-{id}.jpeg', 'pexels-photo.jpg', 'pexels-photo.jpeg'];
-  function onImgError(img) {
-    const m = (img.currentSrc || img.src).match(/images\.pexels\.com\/photos\/(\d+)\/[^?]+(\?.*)?$/);
-    const n = Number(img.dataset.try || 0) + 1;
-    if (m && n < PEXELS_NAMES.length) {
-      img.dataset.try = n;
-      img.removeAttribute('srcset');
-      img.src = 'https://images.pexels.com/photos/' + m[1] + '/' + PEXELS_NAMES[n].replace('{id}', m[1]) + (m[2] || '');
-      return;
-    }
-    img.classList.add('is-broken');
-  }
+  // Se uma foto não carregar, fica o fundo vinho do .ph no lugar
   $$('.ph img').forEach((img) => {
-    img.addEventListener('error', () => onImgError(img));
-    if (img.complete && img.naturalWidth === 0 && (img.currentSrc || img.src)) onImgError(img);
+    const bad = () => img.classList.add('is-broken');
+    img.addEventListener('error', bad, { once: true });
+    if (img.complete && img.naturalWidth === 0 && (img.currentSrc || img.src)) bad();
   });
 
   // Relógio da navegação

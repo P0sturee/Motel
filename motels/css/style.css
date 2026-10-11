@@ -718,7 +718,7 @@ ol, ul { list-style: none; }
   position: absolute; left: 22px; bottom: 18px; z-index: 5;
   font-family: var(--mono); font-size: 12px; letter-spacing: .1em; color: var(--cream-dim);
 }
-.story__count b { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 64px; line-height: 1; color: var(--cream); margin-right: 4px; letter-spacing: -.03em; }
+.story__count b { font-family: var(--sans); font-stretch: 62%; font-weight: 800; font-size: 60px; line-height: .8; color: var(--cream); margin-right: 6px; }
 .step {
   min-height: 76vh; display: flex; flex-direction: column; justify-content: center;
   border-top: 1px solid var(--line);
@@ -982,7 +982,7 @@ ol, ul { list-style: none; }
   .story__steps { position: relative; z-index: 2; }
   .step { min-height: 62vh; justify-content: flex-start; padding-top: 32px; background: linear-gradient(180deg, var(--ink) 0%, var(--ink) 70%, rgba(13, 10, 9, 0)); }
   .step:last-child { min-height: 64vh; }
-  .story__count b { font-size: 44px; }
+  .story__count b { font-size: 40px; }
 
   .book__head { grid-template-columns: minmax(0, 1fr); }
   .book__grid { grid-template-columns: minmax(0, 1fr); }

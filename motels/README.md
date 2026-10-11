@@ -45,22 +45,32 @@ A confirmação final é feita pelo WhatsApp (`whatsapp` em `js/data.js`); não 
 
 ## Fotos
 
-As fotos vêm do [Pexels](https://www.pexels.com/license/) (uso livre, inclusive comercial, sem atribuição obrigatória) e são carregadas direto do servidor deles.
-Todas recebem o mesmo tratamento de cor no CSS. Se alguma não carregar, fica um fundo vinho no lugar.
-Para um motel de verdade, o ideal é trocar pelas fotos das próprias suítes: basta pôr o caminho do arquivo no campo `photo` de cada suíte em `js/data.js` (ex.: `"img/suite-01.jpg"`) e trocar as URLs no `index.html`.
+As fotos ficam em `img/`, cada uma em dois tamanhos (`nome.jpg` e `nome-800.jpg`, o menor para celular).
+Todas são do [Pexels](https://www.pexels.com/license/) (uso livre, inclusive comercial, sem atribuição obrigatória) e recebem o mesmo tratamento de cor no CSS.
+Para um motel de verdade, o ideal é trocar pelas fotos das próprias suítes: salve a foto nova com o mesmo nome em `img/` (nos dois tamanhos) ou mude o caminho em `js/data.js` e no `index.html`.
 
-| Uso | Foto |
+| Arquivo | Foto original |
 | --- | --- |
-| Fachada (atrás do portão) | [Purple and red light in a dark room](https://www.pexels.com/photo/purple-and-red-light-in-a-dark-room-5198473/) |
-| 01 Cortina | [Interior design of a small bedroom](https://www.pexels.com/photo/interior-design-of-a-small-bedroom-13871317/) |
-| 02 Rubra | [Red light in a dark room](https://www.pexels.com/photo/red-light-in-a-dark-room-14434979/) |
-| 03 Vapor | [Interior of sauna](https://www.pexels.com/photo/interior-of-sauna-8092430/) |
-| 04 Espelho | [Modern bathroom with round window](https://www.pexels.com/photo/interior-of-modern-bathroom-with-round-window-6621052/) |
-| 05 Raia | [A swimming pool of a hotel at night](https://www.pexels.com/photo/a-swimming-pool-of-a-hotel-at-night-7974837/) |
-| 06 Alcova | [Interior of a hotel room](https://www.pexels.com/photo/interior-of-a-hotel-room-5883728/) |
-| A casa | [Glasses with sparkling wine](https://www.pexels.com/photo/close-up-photography-of-glasses-with-sparkling-wine-11976218/), [Red silk satin fabric](https://www.pexels.com/photo/close-up-photo-of-a-red-silk-satin-fabric-4863069/), [Neon lit motel in Los Angeles](https://www.pexels.com/photo/neon-lit-motel-at-night-in-los-angeles-31353872/) |
-| Por dentro | [Car in a dim parking garage](https://www.pexels.com/photo/modern-car-in-dimly-lit-parking-garage-at-night-28984405/), [Dinner with wine and candles](https://www.pexels.com/photo/dinner-with-wine-and-candles-19763210/), [Wine glasses and candles](https://www.pexels.com/photo/two-almost-empty-long-stem-wine-glasses-beside-wine-bottle-and-lighted-candles-95949/), [Red silk fabric](https://www.pexels.com/photo/close-up-shot-of-red-silk-fabric-6276014/), [Stylish bathroom](https://www.pexels.com/photo/interior-of-stylish-bathroom-in-cottage-6032425/) |
-| Discrição | [Directional signs to motel](https://www.pexels.com/photo/directional-signs-to-motel-at-night-15439324/), [Doors to hotel rooms in darkness](https://www.pexels.com/photo/doors-to-hotel-rooms-in-darkness-18117654/), [Car in a covered car park](https://www.pexels.com/photo/a-car-in-the-covered-car-park-9661389/), [Couple clinking glasses](https://www.pexels.com/photo/crop-unrecognizable-couple-clinking-champagne-glasses-6581054/), [Sign board of a motel](https://www.pexels.com/photo/sign-board-of-a-motel-9408443/) |
+| `fachada-quarto` | [Purple and red light in a dark room](https://www.pexels.com/photo/purple-and-red-light-in-a-dark-room-5198473/) |
+| `suite-01-cortina` | [Dark hotel room with curtains drawn](https://www.pexels.com/photo/dark-hotel-room-with-curtains-drawn-10343928/) |
+| `suite-02-rubra` | [Red light on the ceiling](https://www.pexels.com/photo/red-light-on-the-ceiling-10482375/) |
+| `suite-03-vapor` | [Interior of sauna](https://www.pexels.com/photo/interior-of-sauna-8092430/) |
+| `suite-04-espelho` | [Modern bathroom with round window](https://www.pexels.com/photo/interior-of-modern-bathroom-with-round-window-6621052/) |
+| `suite-05-raia` | [Villa with a lit pool at night](https://www.pexels.com/photo/holiday-home-villa-pavruka-yayla-in-kalkan-19075395/) |
+| `suite-06-alcova` | [Interior of a hotel room](https://www.pexels.com/photo/interior-of-a-hotel-room-5883728/) |
+| `casa-espumante` | [Glasses with sparkling wine](https://www.pexels.com/photo/close-up-photography-of-glasses-with-sparkling-wine-11976218/) |
+| `casa-cetim` | [Red silk satin fabric](https://www.pexels.com/photo/close-up-photo-of-a-red-silk-satin-fabric-4863069/) |
+| `casa-letreiro` | [Neon lit motel in Los Angeles](https://www.pexels.com/photo/neon-lit-motel-at-night-in-los-angeles-31353872/) |
+| `dentro-garagem` | [Car in a dim parking garage](https://www.pexels.com/photo/modern-car-in-dimly-lit-parking-garage-at-night-28984405/) |
+| `dentro-cozinha` | [Dinner with wine and candles](https://www.pexels.com/photo/dinner-with-wine-and-candles-19763210/) |
+| `dentro-adega` | [Wine glasses and candles](https://www.pexels.com/photo/two-almost-empty-long-stem-wine-glasses-beside-wine-bottle-and-lighted-candles-95949/) |
+| `dentro-enxoval` | [Window in a dark room](https://www.pexels.com/photo/window-in-a-dark-room-14526240/) |
+| `dentro-banho` | [A romantic setting in the bathroom](https://www.pexels.com/photo/a-romantic-setting-in-the-bathroom-4099354/) |
+| `discricao-1-rua` | [Directional signs to motel](https://www.pexels.com/photo/directional-signs-to-motel-at-night-15439324/) |
+| `discricao-2-luz` | [Doors to hotel rooms in darkness](https://www.pexels.com/photo/doors-to-hotel-rooms-in-darkness-18117654/) |
+| `discricao-3-portao` | [Car in a covered car park](https://www.pexels.com/photo/a-car-in-the-covered-car-park-9661389/) |
+| `discricao-4-janelinha` | [Couple clinking glasses](https://www.pexels.com/photo/crop-unrecognizable-couple-clinking-champagne-glasses-6581054/) |
+| `discricao-5-fatura` | [Sign board of a motel](https://www.pexels.com/photo/sign-board-of-a-motel-9408443/) |
 
 ## Bibliotecas e fontes (inclusas na pasta)
 
@@ -78,6 +88,7 @@ motels/
 │   ├── data.js      suítes, preços, extras, contato
 │   ├── booking.js   calendário, horários, quantidade, resumo e confirmação
 │   └── main.js      rolagem suave e todas as animações
+├── img/             fotos (2 tamanhos cada)
 ├── vendor/          gsap, ScrollTrigger, SplitText, lenis
 └── fonts/           woff2 + licenças
 ```
