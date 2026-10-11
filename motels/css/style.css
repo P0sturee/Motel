@@ -64,10 +64,12 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 html, body { margin: 0; }
-html { background: var(--ink); color: var(--cream); -webkit-text-size-adjust: 100%; }
+html { background: var(--ink); color: var(--cream); color-scheme: dark; -webkit-text-size-adjust: 100%; }
 html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-stopped { overflow: clip; }
 body {
+  background: var(--ink);
+  color: var(--cream);
   font-family: var(--sans);
   font-size: clamp(15px, 1.05vw, 17px);
   line-height: 1.55;
