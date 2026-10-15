@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "name": "video-placa-nfc",
+  "description": "Vídeo motion da placa NFC de avaliação Google",
+  "scripts": { "build": "./build.sh" },
+  "dependencies": { "playwright": "1.56.1" }
+}
